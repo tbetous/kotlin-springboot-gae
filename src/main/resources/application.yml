@@ -1,0 +1,26 @@
+security:
+  oauth2:
+    client:
+      clientId: YOUR_GOOGLE_CLIENT_ID
+      clientSecret: YOUR_GOOGLE_CLIENT_SECRET
+      accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - email
+        - profile
+    resource:
+      userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      preferTokenInfo: true
+logging:
+  path: /var/log/app_engine/custom_logs
+  file: app.log
+  level:
+    root: INFO
+twitter:
+  consumerKey: YOUR_TWITTER_CONSUMER_KEY
+  consumerSecret: YOUR_TWITTER_CONSUMER_SECRET
+  accessToken: YOUR_ACCESS_TOKEN
+  accessTokenSecret: YOUR_ACCESS_TOKEN_SECRET
+
